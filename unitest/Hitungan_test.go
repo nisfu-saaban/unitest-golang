@@ -27,6 +27,12 @@ func TestTablePerkalian(t *testing.T) {
 	}
 }
 
+func BenchmarkPerkalian(b *testing.B) {
+	for i := 0; i < b.N; i++ {
+		HitunganPerkalian(3, 4)
+	}
+}
+
 func TestTablePenjumlahan(t *testing.T) {
 	test := []struct {
 		name     string
